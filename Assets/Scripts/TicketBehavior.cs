@@ -108,10 +108,11 @@ public class TicketBehavior : MonoBehaviour {
     }
 
     public void Clear() {
-        clearButton.interactable = false;
         for(int i = 0; i < Player.maxBetOtions; i++) {
             selected[i] = false;
         }
+        clearButton.interactable = false;
+        autoBetStopButton.interactable = false;
         betButton.interactable = false;
         autoBetButton.interactable = false;
         UpdateButtonStates();
