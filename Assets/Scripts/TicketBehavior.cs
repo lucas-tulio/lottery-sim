@@ -188,7 +188,7 @@ public class TicketBehavior : MonoBehaviour {
         }
         timePassedText.text = "Real life time passed: " + timePassed + "\n(at one lottery draw per week)";
 
-        totalNumbersHitText.text = "Total numbers hit: " + hits.Count();
+        totalNumbersHitText.text = "Total numbers hit this round: " + hits.Count();
         maxNumbersHitText.text = "Max numbers hit: " + GameData.player.maxNumbersHit;
         moneyText.text = "$ " + GameData.player.money;
 

@@ -16373,7 +16373,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Total numbers hit:
+  m_text: 'Total numbers hit this round:
 
 '
   m_isRightToLeft: 0
