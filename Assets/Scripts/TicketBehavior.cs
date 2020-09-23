@@ -23,11 +23,13 @@ public class TicketBehavior : MonoBehaviour {
     private System.Random random = new System.Random();
     private bool[] selected = new bool[Player.maxBetOtions];
     private List<Button> buttons = new List<Button>();
+    public GameObject numberResults;
+    public List<Button> results = new List<Button>();
     List<int> allNumbers = new List<int>();
     private bool isAutoBetting = false;
 
     void Start () {
-        UpdateUI(0);
+        UpdateUI(new List<int>(), new int[0]);
         betButton.interactable = false;
         autoBetButton.interactable = false;
         // Setup bet buttons  
@@ -105,6 +107,8 @@ public class TicketBehavior : MonoBehaviour {
         for(int i = 0; i < Player.maxBetOtions; i++) {
             selected[i] = false;
         }
+        betButton.interactable = false;
+        autoBetButton.interactable = false;
         UpdateButtonStates();
     }
 
@@ -117,16 +121,7 @@ public class TicketBehavior : MonoBehaviour {
         int[] winningNumbers = allNumbers.OrderBy(x => random.Next()).Take(Player.maxBets).ToArray<int>();
         Array.Sort(winningNumbers);
 
-        // Check hits
-        int[] playerNumbers = GetNumbersSelected();
-        List<int> hits = new List<int>();
-        for(int i = 0; i < Player.maxBets; i++) {
-            for (int j = 0; j < winningNumbers.Length; j++) {
-                if (playerNumbers[i] == winningNumbers[j]) {
-                    hits.Add(playerNumbers[i]);
-                }
-            }
-        }
+        List<int> hits = GetHits(winningNumbers);
 
         // Update max numbers hit score
         if (hits.Count() > GameData.player.maxNumbersHit) {
@@ -148,10 +143,23 @@ public class TicketBehavior : MonoBehaviour {
         }
 
         // Update UI
-        UpdateUI(hits.Count());
+        UpdateUI(hits, winningNumbers);
     }
 
-    private void UpdateUI(int hits) {
+    private List<int> GetHits(int[] winningNumbers) {
+        int[] playerNumbers = GetNumbersSelected();
+        List<int> hits = new List<int>();
+        for(int i = 0; i < Player.maxBets; i++) {
+            for (int j = 0; j < winningNumbers.Length; j++) {
+                if (playerNumbers[i] == winningNumbers[j]) {
+                    hits.Add(playerNumbers[i]);
+                }
+            }
+        }
+        return hits;
+    }
+
+    private void UpdateUI(List<int> hits, int[] winningNumbers) {
         timesPlayedText.text = "Times played: " + GameData.player.timesPlayed;
         timesLostText.text = "Times lost: " + GameData.player.losses;
         timesWonText.text = "Times won: " + GameData.player.wins;
@@ -167,17 +175,39 @@ public class TicketBehavior : MonoBehaviour {
         }
         timePassedText.text = "Real life time passed: " + timePassed + "\n(One lottery draw per week)";
 
-        totalNumbersHitText.text = "Total numbers hit: " + hits;
+        totalNumbersHitText.text = "Total numbers hit: " + hits.Count();
         maxNumbersHitText.text = "Max numbers hit: " + GameData.player.maxNumbersHit;
         moneyText.text = "$ " + GameData.player.money;
+
+        // Toggle results display
+        if (isAutoBetting && numberResults.activeSelf == false) {
+            numberResults.SetActive(false);
+        } else if (isAutoBetting) {
+            // no-op
+        } else {
+            DisplayResults(hits, winningNumbers);
+        }
+    }
+
+    private void DisplayResults(List<int> hits, int[] winningNumbers) {
+        if (winningNumbers.Length == 0) {
+            return;
+        }
+        numberResults.SetActive(true);
+        int[] numbersSelected = GetNumbersSelected();
+        for (int i = 0; i < Player.maxBets; i++) {
+            results[i].GetComponentInChildren<TextMeshProUGUI>().text = "" + winningNumbers[i];
+        }
     }
 
     public void StartAutoBet() {
         isAutoBetting = true;
+        autoBetButton.interactable = false;
     }
 
     public void StopAutoBet() {
         isAutoBetting = false;
+        autoBetButton.interactable = true;
     }
 
     void Update() {
