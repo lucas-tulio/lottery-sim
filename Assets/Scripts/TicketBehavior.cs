@@ -19,13 +19,14 @@ public class TicketBehavior : MonoBehaviour {
     public Button betButton;
     public Button autoBetButton;
     public Button autoBetStopButton;
+    public Button clearButton;
 
     private System.Random random = new System.Random();
     private bool[] selected = new bool[Player.maxBetOtions];
-    private List<Button> buttons = new List<Button>();
-    public GameObject numberResults;
-    public List<Button> results = new List<Button>();
-    List<int> allNumbers = new List<int>();
+    private List<Button> betNumberButtons = new List<Button>();
+    public GameObject resultsPanel;
+    public List<Button> resultingNumbers = new List<Button>();
+    List<int> availableNumbersToBet = new List<int>();
     private bool isAutoBetting = false;
 
     void Start () {
@@ -38,13 +39,13 @@ public class TicketBehavior : MonoBehaviour {
         foreach(GameObject buttonObject in buttonObjects) {
             Button b = buttonObject.GetComponent<Button>();
             b.GetComponentInChildren<TextMeshProUGUI>().text = (count < 10) ? "0" + count : "" + count;
-            buttons.Add(b);
+            betNumberButtons.Add(b);
             count++;
         }
 
         // Create a list of all numbers
         for (int i = 0; i < Player.maxBetOtions; i++) {
-            allNumbers.Add(i);
+            availableNumbersToBet.Add(i);
         }
     }
      
@@ -78,9 +79,9 @@ public class TicketBehavior : MonoBehaviour {
     private void UpdateButtonStates() {
         for (int i = 0; i < Player.maxBetOtions; i++) {
             if (selected[i]) {
-                buttons[i].GetComponent<Image>().color = new Color(0.2f, 0.73f, 0.95f);
+                betNumberButtons[i].GetComponent<Image>().color = new Color(0.2f, 0.73f, 0.95f);
             } else {
-                buttons[i].GetComponent<Image>().color = new Color(1f, 1f, 1f);
+                betNumberButtons[i].GetComponent<Image>().color = new Color(1f, 1f, 1f);
             }
         }
     }
@@ -96,14 +97,18 @@ public class TicketBehavior : MonoBehaviour {
     }
 
     private void UpdateInstructions() {
+        clearButton.interactable = GetNumbersSelected().Length != 0;
         if (GetNumbersSelected().Length < Player.maxBets) {
             instructionsText.text = "Choose " + (Player.maxBets - GetNumbersSelected().Length) + " numbers";
+            autoBetStopButton.interactable = false;
         } else {
             instructionsText.text = "Bet!";
+            autoBetStopButton.interactable = true;
         }
     }
 
     public void Clear() {
+        clearButton.interactable = false;
         for(int i = 0; i < Player.maxBetOtions; i++) {
             selected[i] = false;
         }
@@ -118,7 +123,7 @@ public class TicketBehavior : MonoBehaviour {
         }
 
         // Randomize numbers
-        int[] winningNumbers = allNumbers.OrderBy(x => random.Next()).Take(Player.maxBets).ToArray<int>();
+        int[] winningNumbers = availableNumbersToBet.OrderBy(x => random.Next()).Take(Player.maxBets).ToArray<int>();
         Array.Sort(winningNumbers);
 
         List<int> hits = GetHits(winningNumbers);
@@ -164,7 +169,7 @@ public class TicketBehavior : MonoBehaviour {
         timesLostText.text = "Times lost: " + GameData.player.losses;
         timesWonText.text = "Times won: " + GameData.player.wins;
         
-        int timePassedDivision = GameData.player.timesPlayed / 52;
+        long timePassedDivision = GameData.player.timesPlayed / 52;
         string timePassed = "";
         if (timePassedDivision == 0) {
             timePassed = "less than 1 year";
@@ -173,15 +178,15 @@ public class TicketBehavior : MonoBehaviour {
         } else {
             timePassed = timePassedDivision + " years";
         }
-        timePassedText.text = "Real life time passed: " + timePassed + "\n(One lottery draw per week)";
+        timePassedText.text = "Real life time passed: " + timePassed + "\n(at one lottery draw per week)";
 
         totalNumbersHitText.text = "Total numbers hit: " + hits.Count();
         maxNumbersHitText.text = "Max numbers hit: " + GameData.player.maxNumbersHit;
         moneyText.text = "$ " + GameData.player.money;
 
         // Toggle results display
-        if (isAutoBetting && numberResults.activeSelf == false) {
-            numberResults.SetActive(false);
+        if (isAutoBetting && resultsPanel.activeSelf == false) {
+            resultsPanel.SetActive(false);
         } else if (isAutoBetting) {
             // no-op
         } else {
@@ -195,20 +200,20 @@ public class TicketBehavior : MonoBehaviour {
         }
 
         // Reset result boxes back to blue
-        foreach(Button resultButton in results) {   
+        foreach(Button resultButton in resultingNumbers) {   
             resultButton.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/blue_button06");
         }
 
-        numberResults.SetActive(true);
+        resultsPanel.SetActive(true);
         int[] numbersSelected = GetNumbersSelected();
         for (int i = 0; i < Player.maxBets; i++) {
             int winningNumber = winningNumbers[i] + 1;
-            results[i].GetComponentInChildren<TextMeshProUGUI>().text = (winningNumber < 10) ? "0" + winningNumber : "" + winningNumber;
+            resultingNumbers[i].GetComponentInChildren<TextMeshProUGUI>().text = (winningNumber < 10) ? "0" + winningNumber : "" + winningNumber;
 
             foreach(int hit in hits) {
                 if (hit == winningNumbers[i]) {
                     // User hit a number
-                    results[i].GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/green_button06");
+                    resultingNumbers[i].GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/green_button06");
                 }
             }
         }
@@ -217,11 +222,15 @@ public class TicketBehavior : MonoBehaviour {
     public void StartAutoBet() {
         isAutoBetting = true;
         autoBetButton.interactable = false;
-        numberResults.SetActive(false);
+        betButton.interactable = false;
+        clearButton.interactable = false;
+        resultsPanel.SetActive(false);
     }
 
     public void StopAutoBet() {
         isAutoBetting = false;
+        betButton.interactable = true;
+        clearButton.interactable = true;
         autoBetButton.interactable = true;
     }
 
@@ -232,6 +241,10 @@ public class TicketBehavior : MonoBehaviour {
 
         if (GetNumbersSelected().Length == Player.maxBets) {
             Bet();
+        }
+
+        if (GameData.player.timesPlayed % 5200 == 0) {
+            GameData.SaveGame();
         }
     }
 }
