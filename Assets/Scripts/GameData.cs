@@ -2,12 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public static class GameData {
+
+    [DllImport("__Internal")]
+    private static extern void SyncFiles();
 
     public static Player player = new Player();
 
@@ -22,6 +26,11 @@ public static class GameData {
         FileStream file = File.Create(Application.persistentDataPath + "/gamesave.save");
         bf.Serialize(file, player);
         file.Close();
+
+        // Webgl save
+        if (Application.platform == RuntimePlatform.WebGLPlayer) {
+            SyncFiles();
+        }
     }
 
     public static void LoadGame() {

@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 13778478}
   - component: {fileID: 13778477}
   m_Layer: 5
-  m_Name: Button (21)
+  m_Name: 21
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 25035554}
   - component: {fileID: 25035553}
   m_Layer: 5
-  m_Name: Button (48)
+  m_Name: 48
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1027,7 +1027,7 @@ GameObject:
   - component: {fileID: 102986598}
   - component: {fileID: 102986597}
   m_Layer: 5
-  m_Name: Button (56)
+  m_Name: 56
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1160,7 +1160,7 @@ GameObject:
   - component: {fileID: 117419413}
   - component: {fileID: 117419412}
   m_Layer: 5
-  m_Name: Button (33)
+  m_Name: 33
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1822,7 +1822,7 @@ GameObject:
   - component: {fileID: 158366879}
   - component: {fileID: 158366878}
   m_Layer: 5
-  m_Name: Button (37)
+  m_Name: 37
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2427,7 +2427,7 @@ GameObject:
   - component: {fileID: 211339029}
   - component: {fileID: 211339028}
   m_Layer: 5
-  m_Name: Button (43)
+  m_Name: 43
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2696,7 +2696,7 @@ GameObject:
   - component: {fileID: 228839030}
   - component: {fileID: 228839029}
   m_Layer: 5
-  m_Name: Button (45)
+  m_Name: 45
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2829,7 +2829,7 @@ GameObject:
   - component: {fileID: 233007594}
   - component: {fileID: 233007593}
   m_Layer: 5
-  m_Name: Button (18)
+  m_Name: 18
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3370,7 +3370,7 @@ GameObject:
   - component: {fileID: 289944660}
   - component: {fileID: 289944659}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: 2
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3503,7 +3503,7 @@ GameObject:
   - component: {fileID: 291592485}
   - component: {fileID: 291592484}
   m_Layer: 5
-  m_Name: Button (39)
+  m_Name: 39
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4351,7 +4351,7 @@ GameObject:
   - component: {fileID: 384093371}
   - component: {fileID: 384093370}
   m_Layer: 5
-  m_Name: Button (6)
+  m_Name: 6
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4872,7 +4872,7 @@ GameObject:
   - component: {fileID: 418326723}
   - component: {fileID: 418326722}
   m_Layer: 5
-  m_Name: Button (47)
+  m_Name: 47
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5275,7 +5275,7 @@ GameObject:
   - component: {fileID: 432570817}
   - component: {fileID: 432570816}
   m_Layer: 5
-  m_Name: Button (44)
+  m_Name: 44
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5408,7 +5408,7 @@ GameObject:
   - component: {fileID: 462153649}
   - component: {fileID: 462153648}
   m_Layer: 5
-  m_Name: Button (7)
+  m_Name: 7
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5541,7 +5541,7 @@ GameObject:
   - component: {fileID: 467787680}
   - component: {fileID: 467787679}
   m_Layer: 5
-  m_Name: Button (28)
+  m_Name: 28
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7502,7 +7502,7 @@ GameObject:
   - component: {fileID: 611434218}
   - component: {fileID: 611434217}
   m_Layer: 5
-  m_Name: Button (15)
+  m_Name: 15
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7635,7 +7635,7 @@ GameObject:
   - component: {fileID: 626689056}
   - component: {fileID: 626689055}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: 3
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7904,7 +7904,7 @@ GameObject:
   - component: {fileID: 639365345}
   - component: {fileID: 639365344}
   m_Layer: 5
-  m_Name: Button (17)
+  m_Name: 17
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8445,7 +8445,7 @@ GameObject:
   - component: {fileID: 738314424}
   - component: {fileID: 738314423}
   m_Layer: 5
-  m_Name: Button (49)
+  m_Name: 49
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8835,7 +8835,7 @@ GameObject:
   - component: {fileID: 760419162}
   - component: {fileID: 760419161}
   m_Layer: 5
-  m_Name: Button (12)
+  m_Name: 12
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9240,7 +9240,7 @@ GameObject:
   - component: {fileID: 832083479}
   - component: {fileID: 832083478}
   m_Layer: 5
-  m_Name: Button (24)
+  m_Name: 24
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9373,7 +9373,7 @@ GameObject:
   - component: {fileID: 834266086}
   - component: {fileID: 834266085}
   m_Layer: 5
-  m_Name: Button (40)
+  m_Name: 40
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9726,7 +9726,7 @@ GameObject:
   - component: {fileID: 864608619}
   - component: {fileID: 864608618}
   m_Layer: 5
-  m_Name: Button (51)
+  m_Name: 51
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9859,7 +9859,7 @@ GameObject:
   - component: {fileID: 871483835}
   - component: {fileID: 871483834}
   m_Layer: 5
-  m_Name: Button (22)
+  m_Name: 22
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10128,7 +10128,7 @@ GameObject:
   - component: {fileID: 901651063}
   - component: {fileID: 901651062}
   m_Layer: 5
-  m_Name: Button (27)
+  m_Name: 27
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10261,7 +10261,7 @@ GameObject:
   - component: {fileID: 935393421}
   - component: {fileID: 935393420}
   m_Layer: 5
-  m_Name: Button (19)
+  m_Name: 19
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10499,7 +10499,7 @@ GameObject:
   - component: {fileID: 954987583}
   - component: {fileID: 954987582}
   m_Layer: 5
-  m_Name: Button (26)
+  m_Name: 26
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11157,7 +11157,7 @@ GameObject:
   - component: {fileID: 1010556940}
   - component: {fileID: 1010556939}
   m_Layer: 5
-  m_Name: Button (16)
+  m_Name: 16
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11426,7 +11426,7 @@ GameObject:
   - component: {fileID: 1043336645}
   - component: {fileID: 1043336644}
   m_Layer: 5
-  m_Name: Button (14)
+  m_Name: 14
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11559,7 +11559,7 @@ GameObject:
   - component: {fileID: 1049184416}
   - component: {fileID: 1049184415}
   m_Layer: 5
-  m_Name: Button (42)
+  m_Name: 42
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12100,7 +12100,7 @@ GameObject:
   - component: {fileID: 1106242586}
   - component: {fileID: 1106242585}
   m_Layer: 5
-  m_Name: Button (36)
+  m_Name: 36
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12569,7 +12569,7 @@ GameObject:
   - component: {fileID: 1179063868}
   - component: {fileID: 1179063867}
   m_Layer: 5
-  m_Name: Button (11)
+  m_Name: 11
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12702,7 +12702,7 @@ GameObject:
   - component: {fileID: 1195066413}
   - component: {fileID: 1195066412}
   m_Layer: 5
-  m_Name: Button (52)
+  m_Name: 52
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13107,7 +13107,7 @@ GameObject:
   - component: {fileID: 1253205881}
   - component: {fileID: 1253205880}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: 1
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13152,7 +13152,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -13361,7 +13361,7 @@ GameObject:
   - component: {fileID: 1295478081}
   - component: {fileID: 1295478080}
   m_Layer: 5
-  m_Name: Button (10)
+  m_Name: 10
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13494,7 +13494,7 @@ GameObject:
   - component: {fileID: 1336283226}
   - component: {fileID: 1336283225}
   m_Layer: 5
-  m_Name: Button (23)
+  m_Name: 23
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13763,7 +13763,7 @@ GameObject:
   - component: {fileID: 1358176923}
   - component: {fileID: 1358176922}
   m_Layer: 5
-  m_Name: Button (54)
+  m_Name: 54
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14032,7 +14032,7 @@ GameObject:
   - component: {fileID: 1392433581}
   - component: {fileID: 1392433580}
   m_Layer: 5
-  m_Name: Button (13)
+  m_Name: 13
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14437,7 +14437,7 @@ GameObject:
   - component: {fileID: 1442763218}
   - component: {fileID: 1442763217}
   m_Layer: 5
-  m_Name: Button (29)
+  m_Name: 29
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14706,7 +14706,7 @@ GameObject:
   - component: {fileID: 1484388816}
   - component: {fileID: 1484388815}
   m_Layer: 5
-  m_Name: Button (41)
+  m_Name: 41
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14987,7 +14987,7 @@ GameObject:
   - component: {fileID: 1515797102}
   - component: {fileID: 1515797101}
   m_Layer: 5
-  m_Name: Button (35)
+  m_Name: 35
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15120,7 +15120,7 @@ GameObject:
   - component: {fileID: 1517527431}
   - component: {fileID: 1517527430}
   m_Layer: 5
-  m_Name: Button (5)
+  m_Name: 5
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15661,7 +15661,7 @@ GameObject:
   - component: {fileID: 1547857192}
   - component: {fileID: 1547857191}
   m_Layer: 5
-  m_Name: Button (25)
+  m_Name: 25
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15794,7 +15794,7 @@ GameObject:
   - component: {fileID: 1554139949}
   - component: {fileID: 1554139948}
   m_Layer: 5
-  m_Name: Button (58)
+  m_Name: 58
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15927,7 +15927,7 @@ GameObject:
   - component: {fileID: 1554635498}
   - component: {fileID: 1554635497}
   m_Layer: 5
-  m_Name: Button
+  m_Name: 0
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17009,7 +17009,7 @@ GameObject:
   - component: {fileID: 1611321613}
   - component: {fileID: 1611321612}
   m_Layer: 5
-  m_Name: Button (46)
+  m_Name: 46
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17142,7 +17142,7 @@ GameObject:
   - component: {fileID: 1614983698}
   - component: {fileID: 1614983697}
   m_Layer: 5
-  m_Name: Button (38)
+  m_Name: 38
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17275,7 +17275,7 @@ GameObject:
   - component: {fileID: 1631087836}
   - component: {fileID: 1631087835}
   m_Layer: 5
-  m_Name: Button (30)
+  m_Name: 30
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18029,7 +18029,7 @@ GameObject:
   - component: {fileID: 1719137593}
   - component: {fileID: 1719137592}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: 4
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18570,7 +18570,7 @@ GameObject:
   - component: {fileID: 1815199757}
   - component: {fileID: 1815199756}
   m_Layer: 5
-  m_Name: Button (8)
+  m_Name: 8
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18839,7 +18839,7 @@ GameObject:
   - component: {fileID: 1816451199}
   - component: {fileID: 1816451198}
   m_Layer: 5
-  m_Name: Button (59)
+  m_Name: 59
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18972,7 +18972,7 @@ GameObject:
   - component: {fileID: 1864317094}
   - component: {fileID: 1864317093}
   m_Layer: 5
-  m_Name: Button (9)
+  m_Name: 9
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19105,7 +19105,7 @@ GameObject:
   - component: {fileID: 1878106880}
   - component: {fileID: 1878106879}
   m_Layer: 5
-  m_Name: Button (53)
+  m_Name: 53
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19238,7 +19238,7 @@ GameObject:
   - component: {fileID: 1889171884}
   - component: {fileID: 1889171883}
   m_Layer: 5
-  m_Name: Button (50)
+  m_Name: 50
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19371,7 +19371,7 @@ GameObject:
   - component: {fileID: 1904843396}
   - component: {fileID: 1904843395}
   m_Layer: 5
-  m_Name: Button (34)
+  m_Name: 34
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20045,7 +20045,7 @@ GameObject:
   - component: {fileID: 1998998677}
   - component: {fileID: 1998998676}
   m_Layer: 5
-  m_Name: Button (31)
+  m_Name: 31
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20312,7 +20312,7 @@ GameObject:
   - component: {fileID: 2034583636}
   - component: {fileID: 2034583635}
   m_Layer: 5
-  m_Name: Button (57)
+  m_Name: 57
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20714,7 +20714,7 @@ GameObject:
   - component: {fileID: 2047486627}
   - component: {fileID: 2047486626}
   m_Layer: 5
-  m_Name: Button (20)
+  m_Name: 20
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20967,7 +20967,7 @@ GameObject:
   - component: {fileID: 2071683822}
   - component: {fileID: 2071683821}
   m_Layer: 5
-  m_Name: Button (32)
+  m_Name: 32
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21370,7 +21370,7 @@ GameObject:
   - component: {fileID: 2111539725}
   - component: {fileID: 2111539724}
   m_Layer: 5
-  m_Name: Button (55)
+  m_Name: 55
   m_TagString: BetOptions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

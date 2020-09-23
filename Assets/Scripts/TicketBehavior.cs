@@ -34,7 +34,7 @@ public class TicketBehavior : MonoBehaviour {
         betButton.interactable = false;
         autoBetButton.interactable = false;
         // Setup bet buttons  
-        GameObject[] buttonObjects = GameObject.FindGameObjectsWithTag("BetOptions");
+        GameObject[] buttonObjects = GetBetButtonsInOrder();
         int count = 1;
         foreach(GameObject buttonObject in buttonObjects) {
             Button b = buttonObject.GetComponent<Button>();
@@ -48,18 +48,25 @@ public class TicketBehavior : MonoBehaviour {
             availableNumbersToBet.Add(i);
         }
     }
+
+    private GameObject[] GetBetButtonsInOrder() {
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("BetOptions");
+        Debug.Log("game objects found " + gameObjects.Length);
+        Array.Sort(gameObjects, ((x, y) => {
+            if (Convert.ToInt32(x.name) > Convert.ToInt32(y.name)) {
+                return 1;
+            } else if (Convert.ToInt32(y.name) > Convert.ToInt32(x.name)) {
+                return -1;
+            } else {
+                return 0;
+            }
+        }));
+        Debug.Log("game objects after " + gameObjects.Length);
+        return gameObjects;
+    }
      
     public void SelectNumber() {
-        string buttonName = EventSystem.current.currentSelectedGameObject.name;
-        int numberSelected;
-
-        // Get which number has been clicked
-        if (!buttonName.Contains("(")) {
-            numberSelected = 0;
-        } else {
-            string parsedString = buttonName.Replace("Button (", "").Replace(")", "");
-            numberSelected = Convert.ToInt32(parsedString);
-        }
+        int numberSelected = Convert.ToInt32(EventSystem.current.currentSelectedGameObject.name);
 
         // Toggle in the selected number array
         if (GetNumbersSelected().Length < Player.maxBets) {
