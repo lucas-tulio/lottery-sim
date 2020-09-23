@@ -193,16 +193,31 @@ public class TicketBehavior : MonoBehaviour {
         if (winningNumbers.Length == 0) {
             return;
         }
+
+        // Reset result boxes back to blue
+        foreach(Button resultButton in results) {   
+            resultButton.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/blue_button06");
+        }
+
         numberResults.SetActive(true);
         int[] numbersSelected = GetNumbersSelected();
         for (int i = 0; i < Player.maxBets; i++) {
-            results[i].GetComponentInChildren<TextMeshProUGUI>().text = "" + winningNumbers[i];
+            int winningNumber = winningNumbers[i] + 1;
+            results[i].GetComponentInChildren<TextMeshProUGUI>().text = (winningNumber < 10) ? "0" + winningNumber : "" + winningNumber;
+
+            foreach(int hit in hits) {
+                if (hit == winningNumbers[i]) {
+                    // User hit a number
+                    results[i].GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/green_button06");
+                }
+            }
         }
     }
 
     public void StartAutoBet() {
         isAutoBetting = true;
         autoBetButton.interactable = false;
+        numberResults.SetActive(false);
     }
 
     public void StopAutoBet() {
